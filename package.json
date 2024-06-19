@@ -1,5 +1,5 @@
 {
-  "name": "bunnycdn-storage-deploy",
+  "name": "bn-2.2.2",
   "version": "2.2.2",
   "description": "",
   "main": "dist/index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nemdo/bunnycdn-storage-deploy-2.2.2.git"
+    "url": "git+https://github.com/nemdo/bn-2.2.2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nemdo/bunnycdn-storage-deploy-2.2.2/issues"
+    "url": "https://github.com/nemdo/bn-2.2.2/issues"
   },
-  "homepage": "https://github.com/nemdo/bunnycdn-storage-deploy-2.2.2#readme",
+  "homepage": "https://github.com/nemdo/bn-2.2.2#readme",
   "engines": {
     "npm": "7.24.2",
     "node": "v16.17.0"

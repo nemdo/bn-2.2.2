@@ -1,5 +1,5 @@
-name: "BunnyCDN storage deployer"
-description: "BunnyCDN storage deployer"
+name: "BN Deploy"
+description: "BN Deploy"
 inputs:
   upload:
     description: "It will upload the files to storage if 'true' provided."
