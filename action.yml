@@ -1,0 +1,37 @@
+name: "BunnyCDN storage deployer"
+description: "BunnyCDN storage deployer"
+inputs:
+  upload:
+    description: "It will upload the files to storage if 'true' provided."
+    default: "false"
+  source:
+    description: "The source directory folder."
+    required: true
+  destination:
+    description: "The destination directory that should be uploaded too in the bunny storage zone. (Example: www)."
+    required: "false"
+  storageZoneName:
+    description: "The name of your storage zone where you are connecting to."
+    required: true
+  storagePassword:
+    description: "The storage password. It should be read and write capable."
+  storageEndpoint:
+    description: "The storage endpoint"
+    default: "storage.bunnycdn.com"
+  accessKey:
+    description: "The API key."
+  pullZoneId:
+    description: "Is required for purging."
+  purgePullZone:
+    description: "It will purge the pull zone if true. pullZoneId and accessKey should be provided."
+    default: "false"
+  remove:
+    description: "It will remove the files from storage before uploading if 'true' provided."
+    default: "false"
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
+branding:
+  icon: "upload-cloud"
+  color: "orange"

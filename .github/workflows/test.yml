@@ -1,0 +1,25 @@
+name: Test deploy to BunnyCDN
+
+on:
+  push:
+    branches:
+      - feature/*
+  workflow_dispatch:
+
+jobs:
+  cd:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+      - name: Deploy
+        uses: nemdo/bunnycdn-storage-deploy-2.2.2
+        with:
+          source: "e2e/test-dir"
+          storageZoneName: "${{ secrets.STORAGE_NAME_TEST }}"
+          storagePassword: "${{ secrets.STORAGE_PASSWORD_TEST }}"
+          accessKey: "${{ secrets.ACCESS_KEY_TEST }}"
+          pullZoneId: "${{ secrets.ZONE_ID_TEST }}"
+          upload: "true"
+          remove: "true"
+          purgePullZone: "true"
